@@ -1,0 +1,6 @@
+# Direct Chiaki PS5 profile
+# Fill only with values obtained through an authorized Chiaki/PSN registration.
+# Do not commit real values.
+host=192.168.1.100
+regist_key_hex=00000000000000000000000000000000
+morning_hex=00000000000000000000000000000000

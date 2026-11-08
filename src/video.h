@@ -1,0 +1,29 @@
+#ifndef VIDEO_H
+#define VIDEO_H
+
+#include <Limelight.h>
+#include <stddef.h>
+#include <stdint.h>
+
+extern DECODER_RENDERER_CALLBACKS decoder_callbacks_ps3;
+
+void ps3video_start();
+void ps3video_stop();
+int  ps3video_is_active();
+void ps3video_draw();
+int  ps3video_get_current_fps();
+int  ps3video_get_decoded_fps();
+int  ps3video_get_submitted_fps();
+int  ps3video_get_dropped_fps();
+int  ps3video_get_decode_latency();
+int  ps3video_get_render_latency();
+int  ps3video_get_net_latency();
+uint32_t ps3video_get_total_decoded_frames();
+void vdec_poll(void);  // Call from main thread to consume decoded frames
+
+/* Standalone Annex-B entry points for the LAN relay mode. */
+int ps3video_setup_h264(int width, int height, int fps);
+int ps3video_submit_annexb_access_unit(const uint8_t *data, size_t length);
+void ps3video_cleanup_h264(void);
+
+#endif

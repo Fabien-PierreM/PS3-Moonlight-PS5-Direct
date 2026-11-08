@@ -1,0 +1,36 @@
+# PS3 Toolchain (installed via make prepare or symlinked for local dev)
+ps3dev
+ps3dev/
+ps3dev-*.tar.gz
+ps3dev-*.tar.gz.tmp
+
+# Build outputs and temporary packaging files
+build/
+dist/
+docs/.citation-ledger.json
+*.elf
+*.self
+*.fake.self
+*.pkg
+*.gnpdrm.pkg
+PARAM.SFO
+
+# Object files and static archives
+*.o
+*.d
+*.a
+src/*.o
+src/*/*.o
+third_party/**/*.o
+third_party/**/*.a
+
+# OS & Editor temporary files
+.DS_Store
+*.swp
+*~
+__pycache__/
+*.pyc
+ps3perf.data
+ps3perf_host
+.trash/
+
